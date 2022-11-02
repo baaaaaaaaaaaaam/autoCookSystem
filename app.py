@@ -48,8 +48,8 @@ class MyApp(QMainWindow, form_class) :
             return
         
         
-        sectionImage='empty.jpg'
-        # sectionImage = self.getImages(sectionNumber)
+        # sectionImage='empty.jpg'
+        sectionImage = self.cropFryerSection(sectionNumber)
 
         if self.basketInference(sectionImage) == 1:
             # 이미지를 torchserver에 요청 한 후 바스켓이 비어있는경우 0, 비어있지않는 경우 1을 반환한다.
